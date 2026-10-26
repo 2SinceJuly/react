@@ -30603,6 +30603,26 @@ const TYPED_GLOBALS = [
             returnValueKind: ValueKind.Mutable,
         }, null, true),
     ],
+    [
+        'PerformanceObserver',
+        addFunction(DEFAULT_SHAPES, [], {
+            positionalParams: [Effect.Freeze],
+            restParam: null,
+            returnType: { kind: 'Poly' },
+            calleeEffect: Effect.Read,
+            returnValueKind: ValueKind.Mutable,
+        }, null, true),
+    ],
+    [
+        'ReportingObserver',
+        addFunction(DEFAULT_SHAPES, [], {
+            positionalParams: [Effect.Freeze, Effect.Read],
+            restParam: null,
+            returnType: { kind: 'Poly' },
+            calleeEffect: Effect.Read,
+            returnValueKind: ValueKind.Mutable,
+        }, null, true),
+    ],
 ];
 const REACT_APIS = [
     [
