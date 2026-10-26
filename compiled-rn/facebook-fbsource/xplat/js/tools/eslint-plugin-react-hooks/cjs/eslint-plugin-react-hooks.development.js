@@ -12,7 +12,7 @@
  * @lightSyntaxTransform
  * @preventMunge
  * @oncall react_core
- * @generated SignedSource<<04053e39e34f3fddf9204c9691daf5d7>>
+ * @generated SignedSource<<ca0fb129ff9b584bc437c451e343b1e4>>
  */
 
 'use strict';
@@ -31686,6 +31686,51 @@ function defaultModuleTypeProvider(moduleName) {
                         restParam: Effect.Read,
                         returnType: { kind: 'type', name: 'Any' },
                         knownIncompatible: `TanStack Virtual's \`useWindowVirtualizer()\` API returns functions that cannot be memoized safely`,
+                    },
+                },
+            };
+        }
+        case 'react-native': {
+            return {
+                kind: 'object',
+                properties: {
+                    PanResponder: {
+                        kind: 'object',
+                        properties: {
+                            create: {
+                                kind: 'function',
+                                positionalParams: [Effect.Freeze],
+                                restParam: null,
+                                calleeEffect: Effect.Read,
+                                returnType: { kind: 'type', name: 'Any' },
+                                returnValueKind: ValueKind.Frozen,
+                                aliasing: {
+                                    receiver: '@receiver',
+                                    params: ['@config'],
+                                    rest: null,
+                                    returns: '@returns',
+                                    temporaries: [],
+                                    effects: [
+                                        {
+                                            kind: 'Freeze',
+                                            value: '@config',
+                                            reason: ValueReason.KnownReturnSignature,
+                                        },
+                                        {
+                                            kind: 'Create',
+                                            into: '@returns',
+                                            value: ValueKind.Frozen,
+                                            reason: ValueReason.KnownReturnSignature,
+                                        },
+                                        {
+                                            kind: 'ImmutableCapture',
+                                            from: '@config',
+                                            into: '@returns',
+                                        },
+                                    ],
+                                },
+                            },
+                        },
                     },
                 },
             };

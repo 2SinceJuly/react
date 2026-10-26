@@ -7,7 +7,7 @@
  * @noflow
  * @nolint
  * @preventMunge
- * @generated SignedSource<<e3ffa9d340e8d3e4a5a106e9e222396a>>
+ * @generated SignedSource<<508aa7f2f66c6a601605c06f6e469b3e>>
  */
 
 /*
@@ -32497,11 +32497,11 @@ __DEV__ &&
     };
     (function () {
       var isomorphicReactPackageVersion = React.version;
-      if ("19.3.0-native-fb-a6b912fb-20261023" !== isomorphicReactPackageVersion)
+      if ("19.3.0-native-fb-9ca7a271-20261026" !== isomorphicReactPackageVersion)
         throw Error(
           'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' +
             (isomorphicReactPackageVersion +
-              "\n  - react-dom:  19.3.0-native-fb-a6b912fb-20261023\nLearn more: https://react.dev/warnings/version-mismatch")
+              "\n  - react-dom:  19.3.0-native-fb-9ca7a271-20261026\nLearn more: https://react.dev/warnings/version-mismatch")
         );
     })();
     ("function" === typeof Map &&
@@ -32538,10 +32538,10 @@ __DEV__ &&
       !(function () {
         var internals = {
           bundleType: 1,
-          version: "19.3.0-native-fb-a6b912fb-20261023",
+          version: "19.3.0-native-fb-9ca7a271-20261026",
           rendererPackageName: "react-dom",
           currentDispatcherRef: ReactSharedInternals,
-          reconcilerVersion: "19.3.0-native-fb-a6b912fb-20261023"
+          reconcilerVersion: "19.3.0-native-fb-9ca7a271-20261026"
         };
         internals.overrideHookState = overrideHookState;
         internals.overrideHookStateDeletePath = overrideHookStateDeletePath;
@@ -33019,7 +33019,7 @@ __DEV__ &&
     exports.useFormStatus = function () {
       return resolveDispatcher().useHostTransitionStatus();
     };
-    exports.version = "19.3.0-native-fb-a6b912fb-20261023";
+    exports.version = "19.3.0-native-fb-9ca7a271-20261026";
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ &&
       "function" ===
         typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop &&

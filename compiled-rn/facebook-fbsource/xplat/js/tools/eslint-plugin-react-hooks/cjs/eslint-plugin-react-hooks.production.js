@@ -6,7 +6,7 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- * @generated SignedSource<<8edd0de169891dce7fed1136a0f194b2>>
+ * @generated SignedSource<<c89ad40f345b3ed170d0bec3b682b1b4>>
  */
 
 'use strict';
@@ -31465,6 +31465,51 @@ function defaultModuleTypeProvider(moduleName) {
                         restParam: Effect.Read,
                         returnType: { kind: 'type', name: 'Any' },
                         knownIncompatible: `TanStack Virtual's \`useWindowVirtualizer()\` API returns functions that cannot be memoized safely`,
+                    },
+                },
+            };
+        }
+        case 'react-native': {
+            return {
+                kind: 'object',
+                properties: {
+                    PanResponder: {
+                        kind: 'object',
+                        properties: {
+                            create: {
+                                kind: 'function',
+                                positionalParams: [Effect.Freeze],
+                                restParam: null,
+                                calleeEffect: Effect.Read,
+                                returnType: { kind: 'type', name: 'Any' },
+                                returnValueKind: ValueKind.Frozen,
+                                aliasing: {
+                                    receiver: '@receiver',
+                                    params: ['@config'],
+                                    rest: null,
+                                    returns: '@returns',
+                                    temporaries: [],
+                                    effects: [
+                                        {
+                                            kind: 'Freeze',
+                                            value: '@config',
+                                            reason: ValueReason.KnownReturnSignature,
+                                        },
+                                        {
+                                            kind: 'Create',
+                                            into: '@returns',
+                                            value: ValueKind.Frozen,
+                                            reason: ValueReason.KnownReturnSignature,
+                                        },
+                                        {
+                                            kind: 'ImmutableCapture',
+                                            from: '@config',
+                                            into: '@returns',
+                                        },
+                                    ],
+                                },
+                            },
+                        },
                     },
                 },
             };
