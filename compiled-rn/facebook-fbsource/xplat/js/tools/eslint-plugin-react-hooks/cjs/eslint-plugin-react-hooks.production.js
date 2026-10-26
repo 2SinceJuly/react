@@ -6,7 +6,7 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- * @generated SignedSource<<c89ad40f345b3ed170d0bec3b682b1b4>>
+ * @generated SignedSource<<69eb53e202ff6611080cef4415d40814>>
  */
 
 'use strict';
@@ -30375,6 +30375,26 @@ const TYPED_GLOBALS = [
         'MutationObserver',
         addFunction(DEFAULT_SHAPES, [], {
             positionalParams: [Effect.Freeze],
+            restParam: null,
+            returnType: { kind: 'Poly' },
+            calleeEffect: Effect.Read,
+            returnValueKind: ValueKind.Mutable,
+        }, null, true),
+    ],
+    [
+        'PerformanceObserver',
+        addFunction(DEFAULT_SHAPES, [], {
+            positionalParams: [Effect.Freeze],
+            restParam: null,
+            returnType: { kind: 'Poly' },
+            calleeEffect: Effect.Read,
+            returnValueKind: ValueKind.Mutable,
+        }, null, true),
+    ],
+    [
+        'ReportingObserver',
+        addFunction(DEFAULT_SHAPES, [], {
+            positionalParams: [Effect.Freeze, Effect.Read],
             restParam: null,
             returnType: { kind: 'Poly' },
             calleeEffect: Effect.Read,

@@ -12,7 +12,7 @@
  * @lightSyntaxTransform
  * @preventMunge
  * @oncall react_core
- * @generated SignedSource<<ca0fb129ff9b584bc437c451e343b1e4>>
+ * @generated SignedSource<<532d828d1399dfbe7df6a840e9efd865>>
  */
 
 'use strict';
@@ -30596,6 +30596,26 @@ const TYPED_GLOBALS = [
         'MutationObserver',
         addFunction(DEFAULT_SHAPES, [], {
             positionalParams: [Effect.Freeze],
+            restParam: null,
+            returnType: { kind: 'Poly' },
+            calleeEffect: Effect.Read,
+            returnValueKind: ValueKind.Mutable,
+        }, null, true),
+    ],
+    [
+        'PerformanceObserver',
+        addFunction(DEFAULT_SHAPES, [], {
+            positionalParams: [Effect.Freeze],
+            restParam: null,
+            returnType: { kind: 'Poly' },
+            calleeEffect: Effect.Read,
+            returnValueKind: ValueKind.Mutable,
+        }, null, true),
+    ],
+    [
+        'ReportingObserver',
+        addFunction(DEFAULT_SHAPES, [], {
+            positionalParams: [Effect.Freeze, Effect.Read],
             restParam: null,
             returnType: { kind: 'Poly' },
             calleeEffect: Effect.Read,
