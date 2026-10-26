@@ -31643,6 +31643,51 @@ function defaultModuleTypeProvider(moduleName) {
                 },
             };
         }
+        case 'react-native': {
+            return {
+                kind: 'object',
+                properties: {
+                    PanResponder: {
+                        kind: 'object',
+                        properties: {
+                            create: {
+                                kind: 'function',
+                                positionalParams: [Effect.Freeze],
+                                restParam: null,
+                                calleeEffect: Effect.Read,
+                                returnType: { kind: 'type', name: 'Any' },
+                                returnValueKind: ValueKind.Frozen,
+                                aliasing: {
+                                    receiver: '@receiver',
+                                    params: ['@config'],
+                                    rest: null,
+                                    returns: '@returns',
+                                    temporaries: [],
+                                    effects: [
+                                        {
+                                            kind: 'Freeze',
+                                            value: '@config',
+                                            reason: ValueReason.KnownReturnSignature,
+                                        },
+                                        {
+                                            kind: 'Create',
+                                            into: '@returns',
+                                            value: ValueKind.Frozen,
+                                            reason: ValueReason.KnownReturnSignature,
+                                        },
+                                        {
+                                            kind: 'ImmutableCapture',
+                                            from: '@config',
+                                            into: '@returns',
+                                        },
+                                    ],
+                                },
+                            },
+                        },
+                    },
+                },
+            };
+        }
     }
     return null;
 }
