@@ -33545,7 +33545,8 @@ function evaluatePhi(phi, constants) {
                     reason: 'value kind expected to be Primitive',
                     loc: GeneratedSource,
                 });
-                if (operandValue.value !== value.value) {
+                if (operandValue.value !== value.value ||
+                    !Object.is(operandValue.value, value.value)) {
                     return null;
                 }
                 break;
@@ -37539,7 +37540,7 @@ function codegenLValue(cx, pattern) {
 }
 function codegenValue(cx, loc, value) {
     if (typeof value === 'number') {
-        if (value < 0) {
+        if (value < 0 || Object.is(value, -0)) {
             return libExports$1.unaryExpression('-', libExports$1.numericLiteral(-value), false);
         }
         else {
