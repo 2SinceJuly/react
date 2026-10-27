@@ -7,7 +7,7 @@
  * @noflow
  * @nolint
  * @preventMunge
- * @generated SignedSource<<3ca965a171c21cc34881a2fb6daa9190>>
+ * @generated SignedSource<<22707fdcdd3cb368a73f9af23dcd8e24>>
  */
 
 "use strict";
@@ -1302,12 +1302,11 @@ __DEV__ &&
           (_enableNativeEventTargetEventDispatching =
             "function" === typeof event && event()));
         if (_enableNativeEventTargetEventDispatching)
-          null != eventTarget &&
-            reactPrivateInterface.dispatchNativeEvent(
-              eventTarget,
-              topLevelType,
-              nativeEvent
-            );
+          reactPrivateInterface.dispatchNativeEvent(
+            eventTarget,
+            topLevelType,
+            nativeEvent
+          );
         else {
           event = eventTarget;
           for (
@@ -21379,10 +21378,10 @@ __DEV__ &&
     (function () {
       var internals = {
         bundleType: 1,
-        version: "19.3.0-native-fb-e9df86ca-20261027",
+        version: "19.3.0-native-fb-dc9aed36-20261027",
         rendererPackageName: "react-native-renderer",
         currentDispatcherRef: ReactSharedInternals,
-        reconcilerVersion: "19.3.0-native-fb-e9df86ca-20261027"
+        reconcilerVersion: "19.3.0-native-fb-dc9aed36-20261027"
       };
       null !== extraDevToolsConfig &&
         (internals.rendererConfig = extraDevToolsConfig);

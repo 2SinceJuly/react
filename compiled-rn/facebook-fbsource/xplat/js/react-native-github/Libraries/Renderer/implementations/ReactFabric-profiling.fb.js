@@ -7,7 +7,7 @@
  * @noflow
  * @nolint
  * @preventMunge
- * @generated SignedSource<<001677b026536cc6fcaea03c4cf4e75f>>
+ * @generated SignedSource<<151eae7f98950938dbb89ec0c8090b41>>
  */
 
 "use strict";
@@ -1410,12 +1410,11 @@ function dispatchEvent(target, topLevelType, nativeEventParam) {
       (_enableNativeEventTargetEventDispatching =
         "function" === typeof event && event()));
     if (_enableNativeEventTargetEventDispatching)
-      null != eventTarget &&
-        reactPrivateInterface.dispatchNativeEvent(
-          eventTarget,
-          topLevelType,
-          nativeEvent
-        );
+      reactPrivateInterface.dispatchNativeEvent(
+        eventTarget,
+        topLevelType,
+        nativeEvent
+      );
     else {
       event = eventTarget;
       for (
@@ -14483,10 +14482,10 @@ batchedUpdatesImpl = function (fn, a) {
 var roots = new Map(),
   internals$jscomp$inline_1671 = {
     bundleType: 0,
-    version: "19.3.0-native-fb-e9df86ca-20261027",
+    version: "19.3.0-native-fb-dc9aed36-20261027",
     rendererPackageName: "react-native-renderer",
     currentDispatcherRef: ReactSharedInternals,
-    reconcilerVersion: "19.3.0-native-fb-e9df86ca-20261027"
+    reconcilerVersion: "19.3.0-native-fb-dc9aed36-20261027"
   };
 null !== extraDevToolsConfig &&
   (internals$jscomp$inline_1671.rendererConfig = extraDevToolsConfig);
