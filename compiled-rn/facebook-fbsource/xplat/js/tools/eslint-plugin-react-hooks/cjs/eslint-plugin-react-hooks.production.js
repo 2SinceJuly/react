@@ -6,7 +6,7 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- * @generated SignedSource<<69eb53e202ff6611080cef4415d40814>>
+ * @generated SignedSource<<35367b97bc3a12744b42943458275d6f>>
  */
 
 'use strict';
@@ -33371,7 +33371,8 @@ function evaluatePhi(phi, constants) {
                     reason: 'value kind expected to be Primitive',
                     loc: GeneratedSource,
                 });
-                if (operandValue.value !== value.value) {
+                if (operandValue.value !== value.value ||
+                    !Object.is(operandValue.value, value.value)) {
                     return null;
                 }
                 break;
@@ -37365,7 +37366,7 @@ function codegenLValue(cx, pattern) {
 }
 function codegenValue(cx, loc, value) {
     if (typeof value === 'number') {
-        if (value < 0) {
+        if (value < 0 || Object.is(value, -0)) {
             return libExports$1.unaryExpression('-', libExports$1.numericLiteral(-value), false);
         }
         else {
